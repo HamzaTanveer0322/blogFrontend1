@@ -6,7 +6,7 @@ import './App.css';
 import SignUp from './Signup';
 import Blog from './Blog';
 import Addblog from './Addblog';
-import PrivateRoute from '../Privateroute';
+import PrivateRoute from './Privateroute';
 import ViewBlog from './ViewBlog';
 import Account from './Account';
 import Footer from './Footer';
