@@ -1,0 +1,105 @@
+.bimg {
+  width: 100%; /* Full width for small devices */
+  max-width: 70%; /* Center the image and limit width to 70% */
+  display: block;
+  max-height: 450px;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+@media (max-width: 768px) {
+  .bimg {
+    max-width: 100%;
+    max-height: 400px;
+  }
+}
+
+.viewblog h2{
+    text-align: center;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+
+}
+
+.viewblog div{
+    margin: 4px 4px 10px 10px;
+}
+
+.comment-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-field {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .btn-add-comment {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .btn-add-comment:hover {
+    background-color: #0056b3;
+  }
+  
+  .comments-list {
+    margin-top: 20px;
+  }
+  
+  .comment-item {
+  
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .comment-details {
+    flex-grow: 1;
+  }
+  
+  .btn-delete {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .btn-delete:hover {
+    color: rgb(27, 27, 27);
+  }
+  .showCommentbtn{
+    background-color: transparent;
+    border: 0;
+   color: rgb(177, 177, 177);
+   font-size: 40px;
+   margin-left: 30px;
+   margin-top: 10px;
+   transition: transform 0.3s ease;
+  }
+ 
+  .showCommentbtn:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .showcom {
+    transition: all 0.3s ease-in-out;
+    transform: rotate(180deg); /* Smooth rotation for arrow up */
+  }
+  
+  p {
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+  }

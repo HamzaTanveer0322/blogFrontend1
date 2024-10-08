@@ -1,0 +1,271 @@
+.aside {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%); /* Optional: Move it out of view */
+    position: absolute; /* Removes it from the normal flow */
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  /* Styles for when aside is active */
+  .aside.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Restore original position */
+    position: relative; /* Ensures it occupies space */
+  }
+  .blog .allblog{
+   
+    text-align: center;
+  align-items: center;
+  justify-content: center;
+    display: flex;
+  
+   }
+  @media (max-width: 768px) {
+
+    .btn-add-blog {
+z-index: 1000;
+    }
+    
+    .blog .allblog{
+     display: flex;
+    margin-top: 130px;
+    text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+   }
+   .blogbanner :nth-child(even){
+   filter: blour(100px);
+  
+  }
+  .blogbanner :nth-child(odd){
+   
+    transform: translate(50px,40px);
+    
+  }
+ 
+}
+ 
+  
+  
+ 
+   
+.blogbanner {
+  max-width: 100%;
+  position: relative;
+  z-index: 1 ;
+  transition: 0.7s;
+  background-image: url(./assets/banner.png); /* Path to the image */
+  min-height: 400px;
+  background-size: cover; /* Ensures the image covers the entire banner */
+  background-position: center; /* Centers the image */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  overflow: hidden;
+  color: white; /* Optional for light text */
+  text-align: center;
+  padding: 20px;
+  
+}
+.btn-add-blog {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #00452f;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 20px 10px 20px 5px #287155 inset; /* Inset shadow */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.btn-add-blog:hover {
+  background-color: #025b3f;
+  box-shadow: 60 12px 5px rgba(0, 0, 0, 0.3); /* Outset shadow on hover */
+}
+
+
+.banner-btn:hover {
+  background-color: #ff5722; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  .blogbanner {
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+  .blogbanner h3 {
+    
+    font-size: 1.8rem;
+    margin-right: 70px; 
+margin-bottom: 50px;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-right: 50px; 
+    margin-right: 50px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .blogbanner {
+    min-height: 250px;
+    padding: 10px;
+  }
+
+  .blogbanner h3 {
+    font-size: 1.1rem;
+  }
+
+  .button {
+    font-size: 0.5rem;
+    padding: 6px 12px;
+
+    margin-right: 50px; 
+  }
+}
+.blogs {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  
+  
+  margin: 0px 50px 6px 5px;
+  flex-direction: column;
+}
+
+.blogs img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1; /* Image behind the button and icon */
+}
+
+.blogs .btn-viewblog {
+  position: absolute;
+  bottom: 10px;/* Adjust to place the button at the top */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: #005916;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: opacity 0.2s ease;
+  z-index: 2; /* Button on top of the image */
+}
+
+.blogs:hover .btn-viewblog {
+  opacity: 1;
+}
+
+.blogs:hover .btn-viewblog::after {
+  content: '';
+  background-image: conic-gradient(from var(--rotate), transparent 30%, green);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  width: 82px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: -1;
+ 
+}
+
+
+.blogs .icontrash {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 10px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+  font-size: 20px;
+  z-index: 3; /* Icon on top of the image and button */
+  cursor: pointer;
+}
+
+.blogs .icontrash:hover {
+  color: rgb(187, 1, 1);
+}
+
+
+.blogs p {
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0; /* Optional: Remove default margin */
+  /* Optional: Add padding for text */
+}
+.blogs button{
+ 
+  padding: 10px 20px;
+  background-color: #00452f;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 20px 10px 20px 5px #287155 inset; /* Inset shadow */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  max-width:300px ;
+}
+.blogs button:hover{
+  background-color: #025b3f;
+  box-shadow: 60 12px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.divsearchblog{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+  height: 50px;
+  background-color: rgba(197, 234, 224, 0.1);
+ justify-content: space-around;
+}
+.divsearchblog button{
+  background-color: transparent;
+  border: 0;
+}
+
+
+.options {
+  background-color: #00452f; 
+  color: #fff;
+  border: 1px solid #003d26; 
+  border-radius: 5px; 
+  padding: 10px; 
+  max-height: 40px; 
+  transition: background-color 0.8s, color 0.4s; 
+}
+
+
+.options option {
+  background-color: #01291d; 
+  color: #fff; 
+  border-radius: 10px;
+  transition: 0.8s;
+  
+}

@@ -1,0 +1,146 @@
+
+.footer-containerr {
+  background-color: #333;
+  position: relative;
+
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+  margin-bottom: 20px; /* Space between sections for mobile */
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-left h5 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-left p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-left a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-right .contact-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-right .contact-btn:hover {
+  background-color: #0056b3;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-menu li {
+  display: inline;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-menu {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-left, .footer-right {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left h5 {
+    font-size: 16px;
+  }
+
+  .footer-left p {
+    font-size: 12px;
+  }
+
+  .footer-right .contact-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .social-media a {
+    font-size: 18px;
+  }
+}

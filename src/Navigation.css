@@ -1,0 +1,109 @@
+/* Container Styles */
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  height: 60px;
+  justify-content: flex-end;
+  color: #000;
+  position: fixed; /* Fixes the navigation at the top */
+  top: 0;
+  width: 100%; /* Ensures the navbar spans the full width of the page */
+  z-index: 1000; /* Ensures the navbar stays above other elements */
+}
+
+/* Hamburger Menu Styles */
+.humburgur {
+  display: none;
+  cursor: pointer;
+}
+
+.togle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+}
+
+.t-l {
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Navigation Menu Styles */
+.navmanu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  margin-left: 20px;
+}
+
+.links {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+}
+
+.links:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.togle.active :nth-child(1) {
+  transform: rotate(45deg) translate(12px, 2px);
+  transition: 0.3s;
+}
+
+.togle.active :nth-child(3) {
+  transition: 0.3s;
+  transform: rotate(-40deg) translate(6px, 6px);
+}
+
+.togle.active :nth-child(2) {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navmanu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 0;
+    background-color: #333;
+    padding: 40px 0;
+    z-index: 1;
+  }
+
+  .navmanu ul.active {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    transition: 0.8s ease-in-out;
+    z-index: 2;
+    width: 60%;
+    background-color: #333;
+    padding: 40px 0 50px 0;
+  }
+
+  .list {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .humburgur {
+    display: block;
+  }
+}

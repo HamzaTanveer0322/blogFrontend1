@@ -1,0 +1,104 @@
+.svgicon button{
+    border: 0.2px solid #c7c7c7 ;
+border-radius: 2px ;
+margin-left: 10px;
+
+}
+.svgicon{
+    background-color: rgb(245, 245, 245);
+
+} 
+.blognamecss .formc{
+  max-width: 200px;
+
+
+}
+.blognamecss{
+  margin-bottom: 10px;
+}
+/* 
+
+.blognamecss {
+  background-color: rgb(10, 167, 47);
+  position: relative; /* Required for the pseudo-element to be positioned relative to this container */
+  /* height: 50px;
+min-width: 200px;
+}
+@property --rotates{
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+.blognamecss::after {
+  content: '';
+  height: 55px;
+  width: 300px;
+  background-image:conic-gradient(from var(--rotates),transparent 60% ,blue,rgb(253, 35, 24));
+  z-index: -1;
+  position: absolute;
+filter: blur(1px);
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  from {
+   --rotates:0deg;
+  }
+  to {
+    --rotates:360deg
+  }
+} */ 
+
+  .containers{
+    position :relative;
+    height: 100vh;
+    width: 100%;
+
+  }
+  .containers .row{
+max-width: 100%;
+
+min-height: 100vh;
+top:50%;
+max-height: 100vh;
+left: 50%;
+transform: translate(-50% -50%);
+
+  }
+  .addblogimg{
+    margin-top: 60px;
+    height:450px;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .addblogimg{
+      height: 300px;
+      width: 100%;
+    }
+  }
+  .catogarylist {
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+    transform: translateY(10px);
+   
+    opacity: 0;
+   
+  }
+  
+  .actives {
+    display: flex; /* Show the dropdown */
+    transform: translateY(0px);
+    opacity: 1;
+ 
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  }
+  
+  .catogarylist button {
+    margin: 5px 0;
+    background-color: rgb(77, 80, 80);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
