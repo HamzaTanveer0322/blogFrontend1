@@ -42,7 +42,7 @@ function Account() {
       if (confirmDelete) {
         const token = Cookies.get('token');
         try {
-          const response = await axios.delete('http://localhost:3002/user/deleteblog', {
+          const response = await axios.delete('https://blog-backend7729.vercel.app/user/deleteblog', {
             headers: { Authorization: `Bearer ${token}` },
             data: {
               _id,
