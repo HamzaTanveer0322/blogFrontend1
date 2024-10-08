@@ -3,6 +3,7 @@ import { BrowserRouter ,  Route,  Routes } from 'react-router-dom';
 import Navigation from './Navigation'
 import Login from './Login';
 import './App.css';
+import './ViewBlog.css';
 import SignUp from './Signup';
 import Blog from './Blog';
 import Addblog from './Addblog';

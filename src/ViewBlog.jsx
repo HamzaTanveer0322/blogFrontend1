@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import axios from "axios";
 import Cookies from 'js-cookie';
-import './ViewBlog.css';
+
 import {  faTrash,  } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
