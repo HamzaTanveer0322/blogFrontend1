@@ -29,7 +29,7 @@ function Blog() {
         const token = Cookies.get('token');
         const userid = Cookies.get('userid');
         try {
-          const res = await axios.get('http://localhost:3002/user/blog', {
+          const res = await axios.get('https://blog-backend7729.vercel.app/user/blog', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setUserid(userid);
@@ -100,7 +100,7 @@ function Blog() {
     try {
       const token = Cookies.get('token');
       const userid = Cookies.get('userid');
-      const res = await axios.get(`http://localhost:3002/user/blogviewC/${selectedCategory}`, {
+      const res = await axios.get(`https://blog-backend7729.vercel.app/user/blogviewC/${selectedCategory}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.status === 200 && res.data.length > 0) {
@@ -140,7 +140,7 @@ function Blog() {
               {userid === item.userid && (
                 <FontAwesomeIcon icon={faTrash} size="2x" className="icontrash" onClick={() => deleteBlog(item._id, item.img)} />
               )}
-              <img src={`http://localhost:3002/${item.img}`} alt={item.name} />
+              <img src={`https://blog-backend7729.vercel.app/${item.img}`} alt={item.name} />
               <h3>{item.name}</h3>
               <p dangerouslySetInnerHTML={{ __html: item.discription }} />
               <NavLink className="btn-viewblog" to={`/ViewBlog/${item._id}`}>Read More</NavLink>

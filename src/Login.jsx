@@ -63,7 +63,7 @@ const [err,seterr]=useState(false)
   const submit = async (e) => {
     e.preventDefault();
     try{
-      const result = await axios.post('http://localhost:3002/user/login', data,{ withCredentials: true});
+      const result = await axios.post('https://blog-backend7729.vercel.app/user/login', data,{ withCredentials: true});
 
       if (result.status === 200) {
         const User={

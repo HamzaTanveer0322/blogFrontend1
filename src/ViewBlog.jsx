@@ -32,7 +32,7 @@ useEffect (()=>{
     setuser(user);}
   const  getBlog=async()=>{
 const token=Cookies.get('token')
-      const response=await axios.get(`http://localhost:3002/user/viewblog/${_id}`, {
+      const response=await axios.get(`https://blog-backend7729.vercel.app/user/viewblog/${_id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       if(response.status===200)
@@ -44,7 +44,7 @@ const token=Cookies.get('token')
     }
     const  getcommit=async()=>{
       const token=Cookies.get('token')
-            const response=await axios.get(`http://localhost:3002/user/viewcomment/${_id}`, {
+            const response=await axios.get(`https://blog-backend7729.vercel.app/user/viewcomment/${_id}`, {
               headers: { Authorization: `Bearer ${token}` }
             })
             if(response.status===200)
@@ -69,7 +69,7 @@ try {
     throw new Error('Token is missing!');
   }
 
-  const res = await axios.post('http://localhost:3002/user/blogcommit', {discription,Users,_id,uid}, {
+  const res = await axios.post('https://blog-backend7729.vercel.app/user/blogcommit', {discription,Users,_id,uid}, {
     headers: { Authorization: `Bearer ${token}` }
   });
 
@@ -93,7 +93,7 @@ try {
       if (confirmDelete) {
         const token = Cookies.get('token');
         try {
-          const response = await axios.delete('http://localhost:3002/user/deletecommit', {
+          const response = await axios.delete('https://blog-backend7729.vercel.app/user/deletecommit', {
             headers: { Authorization: `Bearer ${token}` },
             data: {
               _id
@@ -117,7 +117,7 @@ try {
    
    <div className=" img-fluid viewblog">
    { data.length===0? <p>something went wrong </p>:
-  <> <img  className="bimg"src={`http://localhost:3002/${data.img}`}  alt={data.name}/>
+  <> <img  className="bimg"src={`https://blog-backend7729.vercel.app/${data.img}`}  alt={data.name}/>
    <h2>{data.name}</h2>
   <div dangerouslySetInnerHTML={{__html:data.discription}}/>
   <p style={{ textAlign: 'right' }}>

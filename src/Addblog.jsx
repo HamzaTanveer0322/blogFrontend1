@@ -55,7 +55,7 @@ const data={
     try {
       const token =Cookies.get('token');
   console.log(token);
-      const response = await axios.post('http://localhost:3002/user/upload', formData, {
+      const response = await axios.post('https://blog-backend7729.vercel.app/user/upload', formData, {
         
         headers: {
           'Content-Type': 'multipart/form-data',

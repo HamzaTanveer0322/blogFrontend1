@@ -23,7 +23,7 @@ function Signup() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3002/user/signup', data);
+      const res = await axios.post('https://blog-backend7729.vercel.app/user/signup', data);
   
       // Check for status 201, which is the correct status code for user creation
       if (res.status === 201) {

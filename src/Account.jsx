@@ -94,7 +94,7 @@ const handleLogout = () => {
       item.userid === userid && (  // Display blog only if userid matches
         <div className="blogmenu" key={item._id}>
           <div className='blogaimg'>
-            <img src={`http://localhost:3002/${item.img}`} className='img' alt={item.name || 'Blog Image'} />
+            <img src={`https://blog-backend7729.vercel.app/${item.img}`} className='img' alt={item.name || 'Blog Image'} />
           </div>
           <div>
             <p>{item.name}</p>
