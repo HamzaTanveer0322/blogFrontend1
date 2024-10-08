@@ -27,7 +27,7 @@ function Account() {
           const uid =Cookies.get('userid');
           setuserid(uid)
           setname(user)
-        const res=await  axios.get(`http://localhost:3002/user/blog`, {
+        const res=await  axios.get(`https://blog-backend7729.vercel.app/user/blog`, {
             headers: { Authorization: `Bearer ${token}` }
           })
         setdata(res.data)
